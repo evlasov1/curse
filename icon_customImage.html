@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Достопримечательности России</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <button class="button" onclick="showAttractionsMap()">Карта достопримечательностей России</button>
+    <div id="startTourButtonContainer"></div>
+    <div id="excursionInformation"></div>
+    <div id="map" class="map-container"></div>
+    <a href="empty_page.html" class="back-button">Вернуться на главную страницу</a>
+    <input class="button" type="checkbox" id="interestingCheckbox" onchange="onCheckboxChange('interesting')" checked>
+    <label for="interestingCheckbox">Интересное</label>
+    <input class="button" type="checkbox" id="entertainmentCheckbox" onchange="onCheckboxChange('entertainment')" checked>
+    <label for="entertainmentCheckbox">Развлечения</label>
+    <input class="button" type="checkbox" id="sportsCheckbox" onchange="onCheckboxChange('sports')" checked>
+    <label for="sportsCheckbox">Спорт</label>
+    <script>
+        var balloonContent = '\
+            <h3>' + name + '</h3>\
+            <p>' + description + '</p>\
+            <img src="' + photo + '" alt="' + name + ' фото" width="200">\
+        ';
+    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f08b7911-0ece-4dcf-99c2-4c554cafc7ab&lang=ru_RU" type="text/javascript"></script>
+    <script src="../script.js" type="text/javascript"></script>
+
+</body>
+</html>
